@@ -1,0 +1,3 @@
+[submodule "editory_protos"]
+	path = editory_protos
+	url = git@gitlab.udevs.io:editory/editory_protos.git
