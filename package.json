@@ -6,11 +6,11 @@
   "scripts": {
     "test": "mocha",
     "start": "node index.js",
-    "dev":"nodemon index.js"
+    "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git@gitlab.udevs.io:voxe/editory_payment_service.git"
+    "url": "git@gitlab.udevs.io:editory/editory_payment_service.git"
   },
   "keywords": [],
   "author": "",
@@ -28,5 +28,8 @@
     "request": "^2.88.2",
     "uuid-v4-validator": "^2.0.0",
     "winston": "^3.3.3"
+  },
+  "directories": {
+    "test": "test"
   }
 }
