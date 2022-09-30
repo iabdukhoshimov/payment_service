@@ -4,12 +4,12 @@ const config = {
   maxAllowedUsers: getConf("MAX_USERS", 3),
 
   mongoHost: getConf("MONGO_HOST", "localhost"),
-  mongoPort: getConf("MONGO_PORT", "27017"),
+  mongoPort: getConf("MONGO_PORT", "27018"),
   mongoUser: getConf("MONGO_USER", "payment_service"),
   mongoPassword: getConf("MONGO_PASSWORD", "mongo-passs"),
   mongoDatabase: getConf("MONGO_DATABASE", "payment_service"),
 
-  RPCPort: getConf("RPC_PORT", 6061),
+  RPCPort: getConf("RPC_PORT", 8002),
   HTTPPort: getConf("HTTP_PORT", 3000),
 
   tariffServiceHost: getConf("TARIFF_SERVICE_HOST", "localhost"),

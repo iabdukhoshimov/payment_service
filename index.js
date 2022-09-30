@@ -7,6 +7,7 @@ const logger = require("./config/logger.js");
 const cfg = require("./config");
 const { paymeService } = require("./services/payme");
 const { clickService } = require("./services/click");
+const { orderService } = require("./services/order");
 
 const payMeRouter = require("./routes/payme");
 const clickRouter = require("./routes/click");
@@ -39,7 +40,7 @@ function main() {
     "/" +
     cfg.mongoDatabase;
 
-  mongoDBUrl = "mongodb://localhost:27017/payment_service";
+  mongoDBUrl = "mongodb://localhost:27018/payment_service";
   logger.info("Connecting to db: " + mongoDBUrl);
 
   mongoose.connect(
@@ -68,6 +69,7 @@ function main() {
   server.addService(paymentProto.TransactionService.service, require("./services/transaction.js"));
   server.addService(paymentProto.PaymeService.service, paymeService);
   server.addService(paymentProto.ClickService.service, clickService);
+  server.addService(paymentProto.OrderService.service, orderService);
 
   server.bind("0.0.0.0:" + cfg.RPCPort, grpc.ServerCredentials.createInsecure());
 

@@ -32,8 +32,7 @@ let OrderSchema = new mongoose.Schema(
     status: {
       type: String
     }
-  },
-  { _id: false }
+  }
 );
 
-module.exports.OrderSchema = OrderSchema;
+module.exports.Order = mongoose.model("Order", OrderSchema);
